@@ -6,14 +6,12 @@ interface ProductsState {
   products: ProductDto[];
   loading: boolean;
   error: string | null;
-  search: string;
 }
 
 const initialState: ProductsState = {
   products: [],
   loading: false,
   error: null,
-  search: "",
 };
 
 export const fetchProducts = createAsyncThunk(
@@ -27,11 +25,7 @@ export const fetchProducts = createAsyncThunk(
 const productsSlice = createSlice({
   name: "products",
   initialState,
-  reducers: {
-    setSearchTerm(state, action: { payload: string }) {
-      state.search = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
@@ -40,7 +34,7 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.loading = false;
-        state.products = action.payload;
+        state.products = [...state.products, ...action.payload];
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.loading = false;
@@ -49,5 +43,4 @@ const productsSlice = createSlice({
   },
 });
 
-export const { setSearchTerm } = productsSlice.actions;
 export default productsSlice.reducer;

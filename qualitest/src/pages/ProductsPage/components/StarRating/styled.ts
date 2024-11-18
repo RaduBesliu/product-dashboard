@@ -6,19 +6,18 @@ export const Components = {
     display: inline-block;
     position: relative;
     font-size: 24px;
-    width: 100%;
     color: ${COLORS.darkGray};
     overflow: hidden;
   `,
 
-  Stars: styled.div<{ rating: number }>`
+  Stars: styled.div<{ $rating: number }>`
     position: relative;
     display: inline-block;
     white-space: nowrap;
     background: linear-gradient(
       90deg,
-      ${COLORS.gold} ${({ rating }) => (rating / 5) * 100}%,
-      ${COLORS.darkGray} ${({ rating }) => (rating / 5) * 100}%
+      ${COLORS.gold} ${({ $rating }) => ($rating / 5) * 100}%,
+      ${COLORS.darkGray} ${({ $rating }) => ($rating / 5) * 100}%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

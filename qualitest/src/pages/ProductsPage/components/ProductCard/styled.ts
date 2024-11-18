@@ -5,6 +5,7 @@ export const Components = {
   Container: styled.div`
     display: flex;
     align-items: center;
+    max-width: 400px;
     gap: 16px;
 
     padding: 8px 8px 0 8px;
@@ -20,14 +21,22 @@ export const Components = {
     background-color: transparent;
   `,
 
-  Details: styled.div``,
+  Details: styled.div`
+    flex: 1;
+    width: 100px;
+  `,
 
-  Description: styled.p``,
+  Description: styled.div`
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `,
 
   TopWrapper: styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
   `,
 
   Title: styled.h3``,

@@ -1,6 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../../../store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../store";
 import { Components } from "./styled";
+import StarRating from "../StarRating";
+import Reviews from "./components/Reviews";
 
 const ProductDetails = () => {
   const product = useSelector(
@@ -44,7 +46,10 @@ const ProductDetails = () => {
             </Components.DimensionList>
             <Components.Weight>Weight: {product.weight} kg</Components.Weight>
           </Components.LeftWrapper>
-          <Components.RightWrapper></Components.RightWrapper>
+          <Components.RightWrapper>
+            <StarRating rating={product.rating} />
+            <Reviews />
+          </Components.RightWrapper>
         </>
       )}
     </Components.Container>

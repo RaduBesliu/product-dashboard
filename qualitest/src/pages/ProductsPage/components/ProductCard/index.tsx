@@ -23,7 +23,7 @@ const ProductCard = ({ product }: { product: ProductDto }) => {
             <p>-{product.discountPercentage}%</p>
           </Components.CostContainer>
         </Components.TopWrapper>
-        <p>{product.description}</p>
+        <Components.Description>{product.description}</Components.Description>
         <StarRating rating={product.rating} />
       </Components.Details>
     </Components.Container>

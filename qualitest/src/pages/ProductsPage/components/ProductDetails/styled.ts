@@ -27,6 +27,7 @@ export const Components = {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
   `,
 
   Title: styled.h1``,
@@ -74,6 +75,11 @@ export const Components = {
 
   RightWrapper: styled.div`
     flex: 1;
+    display: flex;
+
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
   `,
 
   ReviewsContainer: styled.div`

@@ -7,7 +7,7 @@ interface StarRatingProps {
 const StarRating = ({ rating }: StarRatingProps) => {
   return (
     <Components.Container>
-      <Components.Stars rating={rating}>★★★★★</Components.Stars>
+      <Components.Stars $rating={rating}>★★★★★</Components.Stars>
     </Components.Container>
   );
 };
