@@ -24,7 +24,6 @@ const ProductsPage = () => {
       e.currentTarget.clientHeight;
 
     if (bottom && allFetched) {
-      console.log("fetch more products");
       setSkip((prevSkip) => prevSkip + PRODUCTS_LIMIT);
     }
   };
