@@ -6,6 +6,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import FavoritesItem from "./components/FavoritesItem";
 import { modalStyles } from "../styled";
 import { Components } from "./styled";
+import { COLORS } from "../../../../../../../../utils";
 
 Modal.setAppElement("#root");
 
@@ -19,7 +20,11 @@ const FavoritesDropdown = () => {
   return (
     <Components.Container>
       <Components.ModalButton onClick={openModal} aria-label="Favorites">
-        <StarBorderIcon />
+        <StarBorderIcon
+          sx={{
+            color: COLORS.white,
+          }}
+        />
       </Components.ModalButton>
 
       <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>

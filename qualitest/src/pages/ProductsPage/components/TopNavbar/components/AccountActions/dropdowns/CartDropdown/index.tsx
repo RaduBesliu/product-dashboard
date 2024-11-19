@@ -9,6 +9,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Components } from "./styled";
 import CartProduct from "./components/CartItem";
 import { modalStyles } from "../styled";
+import { COLORS } from "../../../../../../../../utils";
 
 Modal.setAppElement("#root");
 
@@ -23,7 +24,11 @@ const CartDropdown = () => {
   return (
     <div>
       <Components.ModalButton onClick={openModal} aria-label="Cart">
-        <ShoppingCartIcon />
+        <ShoppingCartIcon
+          sx={{
+            color: COLORS.white,
+          }}
+        />
       </Components.ModalButton>
 
       <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>

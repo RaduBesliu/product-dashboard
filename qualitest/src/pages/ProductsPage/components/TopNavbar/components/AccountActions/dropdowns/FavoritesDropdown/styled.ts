@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const Components = {
-  ModalButton: styled.button``,
+  ModalButton: styled.button`
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+
+    cursor: pointer;
+  `,
 
   Container: styled.div``,
 
