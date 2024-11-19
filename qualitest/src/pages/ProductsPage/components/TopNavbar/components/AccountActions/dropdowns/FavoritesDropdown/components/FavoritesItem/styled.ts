@@ -21,15 +21,7 @@ export const Components = {
     margin-right: 10px;
   `,
 
-  Description: styled.div``,
-
   Paragraph: styled.p``,
-
-  ButtonsWrapper: styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  `,
 
   Button: styled.button`
     background-color: ${COLORS.white};

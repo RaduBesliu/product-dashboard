@@ -7,6 +7,8 @@ export interface DimensionsDto {
 export interface ReviewDto {
   comment: string;
 
+  rating: number;
+
   reviewerName: string;
   reviewerEmail: string;
 

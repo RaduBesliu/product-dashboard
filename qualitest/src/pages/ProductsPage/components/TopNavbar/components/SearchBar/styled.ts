@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
+import { COLORS } from "../../../../../../utils";
 
 export const Components = {
   Container: styled.div`
@@ -14,7 +15,7 @@ export const Components = {
     padding-right: 40px; /* Space for the icon */
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid ${COLORS.darkGray};
     border-radius: 4px;
     outline: none;
     box-sizing: border-box;
@@ -25,6 +26,6 @@ export const Components = {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #888;
+    color: ${COLORS.darkGray};
   `,
 };

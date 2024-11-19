@@ -6,8 +6,9 @@ import {
   selectCartTotal,
 } from "../../../../../../../../store/selectors";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Components, cartModalStyles } from "./styled";
+import { Components } from "./styled";
 import CartProduct from "./components/CartItem";
+import { modalStyles } from "../styled";
 
 Modal.setAppElement("#root");
 
@@ -25,11 +26,7 @@ const CartDropdown = () => {
         <ShoppingCartIcon />
       </Components.ModalButton>
 
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={cartModalStyles}
-      >
+      <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>
         <Components.Container>
           <Components.CartTitle>Your Cart</Components.CartTitle>
           {!cartItems.length ? (

@@ -3,6 +3,9 @@ import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { selectFavorites } from "../../../../../../../../store/selectors";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import FavoritesItem from "./components/FavoritesItem";
+import { modalStyles } from "../styled";
+import { Components } from "./styled";
 
 Modal.setAppElement("#root");
 
@@ -14,57 +17,22 @@ const FavoritesDropdown = () => {
   const closeModal = () => setIsOpen(false);
 
   return (
-    <div>
-      <button onClick={openModal}>
+    <Components.Container>
+      <Components.ModalButton onClick={openModal} aria-label="Favorites">
         <StarBorderIcon />
-      </button>
+      </Components.ModalButton>
 
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={closeModal}
-        style={{
-          overlay: {
-            backgroundColor: "transparent",
-          },
-          content: {
-            top: "50px", // Position near trigger
-            right: "20px",
-            left: "auto",
-            bottom: "auto",
-            width: "300px",
-            padding: "10px",
-            borderRadius: "8px",
-            border: "1px solid #ccc",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            overflow: "auto",
-          },
-        }}
-      >
-        <div>
-          <h3>Your Favorites</h3>
+      <Modal isOpen={isOpen} onRequestClose={closeModal} style={modalStyles}>
+        <Components.FavoritesTitle>Your Favorites</Components.FavoritesTitle>
+        <Components.ItemsContainer>
           {favorites.length === 0 ? (
-            <p>No favorites</p>
+            <Components.Paragraph>No favorites</Components.Paragraph>
           ) : (
-            favorites.map((item) => (
-              <div
-                key={item.id}
-                style={{ display: "flex", marginBottom: "10px" }}
-              >
-                <img
-                  src={item.thumbnail}
-                  alt={item.title}
-                  width="50"
-                  style={{ marginRight: "10px" }}
-                />
-                <div>
-                  <p>{item.title}</p>
-                </div>
-              </div>
-            ))
+            favorites.map((item) => <FavoritesItem key={item.id} item={item} />)
           )}
-        </div>
+        </Components.ItemsContainer>
       </Modal>
-    </div>
+    </Components.Container>
   );
 };
 

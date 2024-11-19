@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../../../store";
 import { Components } from "./styled";
 import StarRating from "../StarRating";
-import Reviews from "./components/Reviews";
+import ReviewsCarousel from "./components/ReviewsCarousel";
 import FullScreenImage from "./components/FullScreenImage";
 import AddToCartButton from "../AddToCardButton";
 import AddToFavoritesButton from "../AddToFavoritesButton";
@@ -89,7 +89,7 @@ const ProductDetails = () => {
           <Components.RightWrapper>
             <Components.StarAndReviewsWrapper>
               <StarRating rating={product.rating} />
-              <Reviews />
+              <ReviewsCarousel reviews={product.reviews} />
             </Components.StarAndReviewsWrapper>
             <Components.ActionsWrapper>
               <AddToCartButton onClick={handleAddToCart} />
