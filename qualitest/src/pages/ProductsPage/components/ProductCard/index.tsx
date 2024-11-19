@@ -44,21 +44,21 @@ const ProductCard = ({ product }: { product: ProductDto }) => {
 
   return (
     <Components.Container onClick={onProductClick}>
-      <Components.Thumbnail src={product.thumbnail} alt={""} />
+      <Components.Thumbnail src={product?.thumbnail} alt={""} />
       {/* empty because title is nearby */}
       <Components.Details>
         <Components.TopWrapper>
-          <Components.Title>{product.title}</Components.Title>
+          <Components.Title>{product?.title}</Components.Title>
           <Components.CostContainer>
-            <Components.Price>${product.price.toFixed(2)}</Components.Price>
+            <Components.Price>${product?.price?.toFixed(2)}</Components.Price>
             <Components.DiscountPercentage>
-              -{product.discountPercentage.toFixed(2)}%
+              -{product?.discountPercentage?.toFixed(2)}%
             </Components.DiscountPercentage>
           </Components.CostContainer>
         </Components.TopWrapper>
-        <Components.Description>{product.description}</Components.Description>
+        <Components.Description>{product?.description}</Components.Description>
         <Components.BottomWrapper>
-          <StarRating rating={product.rating} />
+          <StarRating rating={product?.rating} />
           <Components.ActionsWrapper>
             <AddToCartButton onClick={handleAddToCart} />
             <AddToFavoritesButton

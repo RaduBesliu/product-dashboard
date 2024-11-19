@@ -16,7 +16,7 @@ const ProductDetails = () => {
   const cartItems = useSelector(selectCartItems);
   const favoriteItems = useSelector(selectFavorites);
   const product = useSelector(
-    (state: RootState) => state.productDetails.product
+    (state: RootState) => state.productDetails?.product
   );
 
   const handleAddToCart = (e: React.MouseEvent) => {

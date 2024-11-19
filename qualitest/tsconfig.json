@@ -3,5 +3,11 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "types": ["jest", "@testing-library/jest-dom"],
+    "typeRoots": ["./node_modules/@types"],
+    "jsx": "react-jsx"
+  }
 }

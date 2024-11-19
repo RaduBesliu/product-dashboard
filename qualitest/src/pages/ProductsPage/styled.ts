@@ -37,4 +37,14 @@ export const Components = {
     -ms-overflow-style: none;
     scrollbar-width: none;
   `,
+
+  Loading: styled.h1`
+    font-size: 24px;
+    color: ${COLORS.white};
+  `,
+
+  NoProducts: styled.h1`
+    font-size: 24px;
+    color: ${COLORS.white};
+  `,
 };
