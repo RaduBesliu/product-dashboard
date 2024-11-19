@@ -72,19 +72,18 @@ const ProductDetails = () => {
             </Components.Description>
             <Components.DimensionList>
               <Components.DimensionItem>
-                <p>Width</p>
-                <p>{product.dimensions.width} cm</p>
+                Width: {product.dimensions.width} cm
               </Components.DimensionItem>
               <Components.DimensionItem>
-                <p>Height</p>
-                <p>{product.dimensions.height} cm</p>
+                Height: {product.dimensions.height} cm
               </Components.DimensionItem>
               <Components.DimensionItem>
-                <p>Depth</p>
-                <p>{product.dimensions.depth} cm</p>
+                Depth: {product.dimensions.depth} cm
+              </Components.DimensionItem>
+              <Components.DimensionItem>
+                Weight: {product.weight} kg
               </Components.DimensionItem>
             </Components.DimensionList>
-            <Components.Weight>Weight: {product.weight} kg</Components.Weight>
           </Components.LeftWrapper>
           <Components.RightWrapper>
             <Components.StarAndReviewsWrapper>

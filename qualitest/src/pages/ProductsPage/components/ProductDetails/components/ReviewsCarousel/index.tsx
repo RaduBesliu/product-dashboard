@@ -16,6 +16,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   adjustHeight: true,
+  accessibility: true,
 };
 
 const ReviewsCarousel = ({ reviews }: ReviewsCarouselProps) => {

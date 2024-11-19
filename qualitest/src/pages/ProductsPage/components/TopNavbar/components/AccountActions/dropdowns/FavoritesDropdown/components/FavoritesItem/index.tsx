@@ -17,7 +17,9 @@ const FavoritesItem = ({ item }: { item: ProductDto }) => {
         <Components.Image src={item.thumbnail} alt={""} />
         <Components.Paragraph>{item.title}</Components.Paragraph>
       </Components.ItemWrapper>
-      <Components.Button onClick={toggleItemFavorite}>Remove</Components.Button>
+      <Components.Button onClick={toggleItemFavorite} danger>
+        Remove
+      </Components.Button>
     </Components.Container>
   );
 };

@@ -8,7 +8,7 @@ export const Components = {
 
     padding: 16px;
 
-    background-color: ${COLORS.white};
+    background-color: ${COLORS.background};
   `,
 
   PageWrapper: styled.div`
@@ -17,6 +17,10 @@ export const Components = {
 
     display: flex;
     gap: 64px;
+
+    @media (max-width: 818px) {
+      gap: 16px;
+    }
   `,
 
   ProductsList: styled.div`

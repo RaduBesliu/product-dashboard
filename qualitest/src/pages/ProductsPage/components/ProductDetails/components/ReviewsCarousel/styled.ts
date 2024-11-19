@@ -4,9 +4,13 @@ import { COLORS } from "../../../../../../utils";
 export const Components = {
   Container: styled.div`
     width: 100%;
+
+    @media (max-width: 1080px) {
+      display: none;
+    }
   `,
 
-  Title: styled.h3``,
+  Title: styled.h2``,
 
   SliderItem: styled.div`
     padding: 10px;
@@ -20,11 +24,11 @@ export const Components = {
   Reviewer: styled.p`
     font-size: 12px;
     font-weight: bold;
-    color: ${COLORS.darkGray};
+    color: ${COLORS.background};
   `,
 
   Date: styled.p`
     font-size: 12px;
-    color: ${COLORS.darkGray};
+    color: ${COLORS.background};
   `,
 };

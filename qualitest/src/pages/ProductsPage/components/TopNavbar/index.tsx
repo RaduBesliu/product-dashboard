@@ -5,7 +5,7 @@ import { Components } from "./styled";
 const TopNavbar = () => {
   return (
     <Components.Container>
-      <header>App Logo</header>
+      <Components.Header>Shoppy</Components.Header>
       <SearchBar />
       <AccountActions />
     </Components.Container>

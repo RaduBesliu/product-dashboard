@@ -6,6 +6,7 @@ export const Components = {
     display: inline-block;
     position: relative;
     font-size: 24px;
+    padding-bottom: 5px;
     color: ${COLORS.darkGray};
     overflow: hidden;
   `,

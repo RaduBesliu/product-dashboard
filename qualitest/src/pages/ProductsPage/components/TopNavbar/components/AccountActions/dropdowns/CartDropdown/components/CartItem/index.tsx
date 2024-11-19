@@ -29,14 +29,14 @@ const CartProduct = ({ item }: { item: CartItem }) => {
         <Components.Description>
           <Components.Paragraph>{item.title}</Components.Paragraph>
           <Components.Paragraph>Quantity: {item.quantity}</Components.Paragraph>
-          <Components.Paragraph>Price: ${item.price}</Components.Paragraph>
-          <Components.Paragraph>
+          <Components.Price>Price: ${item.price}</Components.Price>
+          <Components.Price>
             Total Price: ${(item.price * item.quantity).toFixed(2)}
-          </Components.Paragraph>
+          </Components.Price>
         </Components.Description>
       </Components.ItemWrapper>
       <Components.ButtonsWrapper>
-        <Components.Button onClick={removeItemFromCart}>
+        <Components.Button onClick={removeItemFromCart} danger>
           Remove
         </Components.Button>
         <Components.Button onClick={incrementQuantity}>+</Components.Button>

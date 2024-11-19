@@ -23,8 +23,9 @@ export const Components = {
 
   Paragraph: styled.p``,
 
-  Button: styled.button`
-    background-color: ${COLORS.white};
+  Button: styled.button<{ danger?: boolean }>`
+    background-color: ${({ danger }) => (danger ? COLORS.red : COLORS.white)};
+    color: ${COLORS.black};
 
     border: 1px solid ${COLORS.black};
     border-radius: 4px;
@@ -32,5 +33,7 @@ export const Components = {
     padding: 4px 8px;
 
     cursor: pointer;
+
+    font-weight: bold;
   `,
 };

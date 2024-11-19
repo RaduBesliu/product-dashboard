@@ -38,9 +38,7 @@ const CartDropdown = () => {
               ))}
             </Components.ItemsContainer>
           )}
-          <Components.Paragraph>
-            Total: ${cartTotal.toFixed(2)}
-          </Components.Paragraph>
+          <Components.Total>Total: ${cartTotal.toFixed(2)}</Components.Total>
         </Components.Container>
       </Modal>
     </div>

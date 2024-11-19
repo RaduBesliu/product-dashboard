@@ -16,4 +16,8 @@ export const Components = {
     flex-direction: column;
     gap: 8px;
   `,
+
+  Total: styled.p`
+    font-weight: bold;
+  `,
 };

@@ -12,7 +12,15 @@ export const Components = {
 
     padding: 64px;
 
-    background-color: ${COLORS.gray};
+    min-width: 400px;
+
+    background-color: ${COLORS.cardBackground};
+    border-radius: 8px;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      gap: 16px;
+    }
   `,
 
   LeftWrapper: styled.div`
@@ -28,18 +36,36 @@ export const Components = {
     justify-content: space-between;
     align-items: center;
     gap: 4px;
+
+    @media (max-width: 818px) {
+      flex-direction: column;
+    }
   `,
 
   Title: styled.h1``,
 
   CostContainer: styled.div`
     display: flex;
+    flex-direction: column;
     gap: 6px;
+    align-items: flex-end;
+
+    @media (max-width: 818px) {
+      align-items: center;
+    }
   `,
 
-  Price: styled.p``,
+  Price: styled.p`
+    font-weight: bold;
+  `,
 
-  DiscountPercentage: styled.p``,
+  DiscountPercentage: styled.p`
+    background-color: ${COLORS.green};
+    padding: 2px;
+    border-radius: 2px;
+
+    font-weight: bold;
+  `,
 
   ImageContainer: styled.div`
     position: relative;
@@ -69,11 +95,13 @@ export const Components = {
 
   Description: styled.p``,
 
-  DimensionList: styled.ul``,
+  DimensionList: styled.ul`
+    @media (max-height: 800px) {
+      display: none;
+    }
+  `,
 
   DimensionItem: styled.li``,
-
-  Weight: styled.p``,
 
   RightWrapper: styled.div`
     flex: 1;
@@ -82,6 +110,10 @@ export const Components = {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+
+    @media (max-height: 850px) {
+      display: none;
+    }
   `,
 
   StarAndReviewsWrapper: styled.div`
@@ -94,9 +126,7 @@ export const Components = {
   `,
 
   ReviewsContainer: styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    width: 100%;
   `,
 
   ActionsWrapper: styled.div`

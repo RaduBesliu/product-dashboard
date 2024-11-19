@@ -6,6 +6,8 @@ export const Components = {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4px;
+
     margin-bottom: 10px;
   `,
 
@@ -25,14 +27,19 @@ export const Components = {
 
   Paragraph: styled.p``,
 
+  Price: styled.p`
+    font-weight: bold;
+  `,
+
   ButtonsWrapper: styled.div`
     display: flex;
     flex-direction: column;
     gap: 4px;
   `,
 
-  Button: styled.button`
-    background-color: ${COLORS.white};
+  Button: styled.button<{ danger?: boolean }>`
+    background-color: ${({ danger }) => (danger ? COLORS.red : COLORS.white)};
+    color: ${COLORS.black};
 
     border: 1px solid ${COLORS.black};
     border-radius: 4px;
@@ -40,5 +47,7 @@ export const Components = {
     padding: 4px 8px;
 
     cursor: pointer;
+
+    font-weight: bold;
   `,
 };

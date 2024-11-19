@@ -6,13 +6,16 @@ export const Components = {
   Container: styled.div`
     position: relative;
     width: 20%;
+    max-width: 300px;
+    min-width: 200px;
+
     height: 36px;
   `,
 
   SearchInput: styled.input`
     width: 100%;
     height: 100%;
-    padding-right: 40px; /* Space for the icon */
+    padding-right: 40px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid ${COLORS.darkGray};
