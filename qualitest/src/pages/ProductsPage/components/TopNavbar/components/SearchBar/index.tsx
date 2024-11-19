@@ -26,6 +26,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Search"
         onChange={handleChange}
+        aria-label="Search"
       />
       <Components.StyledIcon />
     </Components.Container>

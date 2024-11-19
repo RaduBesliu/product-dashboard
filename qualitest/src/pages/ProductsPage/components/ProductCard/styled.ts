@@ -11,6 +11,8 @@ export const Components = {
     padding: 8px 8px 0 8px;
 
     background-color: ${COLORS.gray};
+
+    cursor: pointer;
   `,
 
   Thumbnail: styled.img`
@@ -39,7 +41,9 @@ export const Components = {
     gap: 4px;
   `,
 
-  Title: styled.h3``,
+  Title: styled.h1`
+    font-size: 1.2rem;
+  `,
 
   CostContainer: styled.div`
     display: flex;
@@ -49,4 +53,16 @@ export const Components = {
   Price: styled.p``,
 
   DiscountPercentage: styled.p``,
+
+  BottomWrapper: styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  `,
+
+  ActionsWrapper: styled.div`
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  `,
 };

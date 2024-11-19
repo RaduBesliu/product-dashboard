@@ -1,12 +1,12 @@
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import CartDropdown from "./dropdowns/CartDropdown";
+import FavoritesDropdown from "./dropdowns/FavoritesDropdown";
 import { Components } from "./styled";
 
 const AccountActions = () => {
   return (
     <Components.Container>
-      <ShoppingCartIcon />
-      <StarBorderIcon />
+      <CartDropdown />
+      <FavoritesDropdown />
     </Components.Container>
   );
 };

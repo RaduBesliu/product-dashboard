@@ -44,6 +44,8 @@ export const Components = {
   ImageContainer: styled.div`
     position: relative;
     max-width: 200px;
+
+    cursor: pointer;
   `,
 
   Image: styled.img`
@@ -53,16 +55,16 @@ export const Components = {
     object-fit: cover;
   `,
 
-  FullScreenButton: styled(FullscreenIcon)`
+  StyledFullScreenIcon: styled(FullscreenIcon)`
     position: absolute;
     top: 16px;
     right: 16px;
 
-    padding: 8px 16px;
-    color: ${COLORS.gray};
-    z-index: 2;
+    width: 32px;
+    height: 32px;
 
-    cursor: pointer;
+    padding: 8px 16px;
+    color: #888;
   `,
 
   Description: styled.p``,
@@ -78,13 +80,28 @@ export const Components = {
     display: flex;
 
     flex-direction: column;
-    gap: 16px;
     align-items: flex-end;
+    justify-content: space-between;
+  `,
+
+  StarAndReviewsWrapper: styled.div`
+    width: 100%;
+    max-width: 360px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   `,
 
   ReviewsContainer: styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+  `,
+
+  ActionsWrapper: styled.div`
+    display: flex;
+    gap: 8px;
+    align-items: center;
   `,
 };
